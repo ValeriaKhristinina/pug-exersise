@@ -1,0 +1,68 @@
+.login
+	border: 2px solid clr-grey
+	padding: 20px
+
+.login-form
+	display: flex
+	flex-direction: column
+	// justify-content: center
+	align-items: flex-end
+
+.login__title
+	width: 100%
+	margin-bottom: 20px
+	border-bottom: 2px solid clr-grey
+
+.login-form input
+	box-sizing border-box
+	width: 300px
+	margin-right: 50px
+	margin-left: 35px
+
+input[type='checkbox']
+	width: auto
+	margin: 0;
+	opacity: 0;
+
+.login-form label:last-of-type
+	position relative
+	align-self: center;
+	padding-left 45px
+	cursor pointer
+
+.login__indicator::before
+	content ""
+	position absolute
+	top 8px
+	left 13px
+	width 10px
+	height 10px
+	border 2px solid clr-grey
+
+input[type='checkbox']:checked~.login__indicator::after
+	content ""
+	position absolute
+	top 2px
+	left 20px
+	width 5px
+	height 15px
+	border 2px solid clr-black
+	border-left none
+	border-top none
+	transform rotate(45deg)
+
+.login__sign-in
+	font-size 15px
+	align-self center
+	padding 0 15px
+	margin-top 15px
+	border 2px solid clr-grey
+	background transparent
+
+input:not([type='checked'])
+	padding 3px 15px
+	margin-bottom 5px
+
+input:not([type='checked']):focus
+	outline none
+	border-color clr-black

@@ -1,0 +1,43 @@
+
+
+.tabs label
+	padding: 0 20px
+	border: 2px solid clr-grey
+	border-bottom: none
+	// border-radius: brdr-radius
+	cursor: pointer
+
+.tabs label:active
+	opacity 0.5
+
+.tabs label:nth-child(n+2)
+	border-left: none
+
+.tab
+	position: relative
+
+.tab__content
+	display: none
+	height 200px
+	border: 2px solid clr-grey
+	// border-radius: brdr-radius
+	overflow: overlay
+
+
+.tab__description
+	padding: 10px
+	overflow: hidden
+
+
+#toggle-1:checked~.tab__content,
+#toggle-2:checked~.tab__content,
+#toggle-3:checked~.tab__content
+	display: block
+
+
+
+
+.tab input
+	position: absolute
+	top: 0
+	opacity: 0
